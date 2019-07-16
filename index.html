@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 11px;
+  width: 10%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: black;}
+#News {background-color: black;}
+#Contact {background-color: black;}
+#About {background-color: black;}
+#acs {background-color: black;}
+#Not {background-color: black;}
+#kac {background-color: black;}
+#zac {background-color: black;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'black')"id="defaultOpen">Form</button>
+<button class="tablink" onclick="openPage('News', this, 'black')">EDIT</button>
+<button class="tablink" onclick="openPage('Contact', this, 'black')">Portals</button>
+<button class="tablink" onclick="openPage('About', this, 'black')">Demog</button>
+<button class="tablink" onclick="openPage('acs', this, 'black')">Aetna Contact</button>
+<button class="tablink" onclick="openPage('Not', this, 'black')">No Portal</button>
+<button class="tablink" onclick="openPage('kac', this, 'black')">Kaiser Admin Creds</button>
+<button class="tablink" onclick="openPage('zac', this, 'black')">Zen Admin Creds</button>
+
+<div id="Home" class="tabcontent">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+
+   $( "#textInput" ).bind( 'paste',function()
+   {
+       setTimeout(function()
+       { 
+          //get the value of the input text
+          var data= $( '#textInput' ).val() ;
+          //replace the special characters to '' 
+          var dataFull = data.replace(/[^a-zA-Z 0-9]+/g, '');
+          //set the new value of the input text without special characters
+          $( '#textInput' ).val(dataFull);
+       });
+
+    });
+});
+</script>
+  <main>
+  <form id="myForm">
+   <p>
+    <input type="text" name="FullName" placeholder="FullName">'s personal information was recently updated in OneDigital. To ensure <input type="text" name="FirstName" placeholder="FirstName">'s information is accurate, please update this information within <input type="text" name="carrier" placeholder="carrier">.<br>
+      
+      
+    <br>
+Updated Information*:* 
+<b><textarea rows="4" cols="50" name="changes" placeholder="changes">• </textarea></b><br>
+This member's social security number is <input id="textInput" name="textInput">.
+<br><br>
+Please let us know if there's anything you need.
+    </p>
+
+  </form>
+<center>
+<input type="button" onclick="myFunction()" value="          "></center>
+<script>
+function myFunction() {
+    document.getElementById("myForm").reset();
+}
+</script>
+</main>
+
+ 
+  
+  
+  <style>
+  body {
+  --color-page-background: rgba(0, 0, 20, .95);
+  --color-primary-light: rgb(10,10,10);
+  --color-primary-dark: rgb(240,240,240);
+}
+
+.nightmode {
+    --color-page-background: rgba(0, 0, 80, .15);
+  --color-primary-light: rgb(240,240,240);
+  --color-primary-dark: rgb(10,10,10);
+}
+
+
+* {
+    transition: all .15s ease-in;
+}
+
+body {
+  background-color: var(--color-page-background);
+  font: 1.1em/1.4 Dosis;
+  color: var(--color-primary-dark);
+}
+
+main {
+  max-width: 40rem;
+  margin: auto;
+  padding: 1rem;
+}
+
+article {
+  padding: 2rem;
+  background-color: var(--color-primary-light);
+  box-shadow: 6px 6px 0 0 var(--color-primary-dark);
+  * {
+    margin: 0;
+  }
+  * + * {
+    margin-top: 1rem;
+  }
+}
+
+[data-switch-contrast] {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  height: 3rem;
+  width: 3rem;
+  
+  background-color: var(--color-primary-dark);
+  border: 1px solid var(--color-primary-light);
+  color: var(--color-primary-light);
+  border-radius: 50%;
+}
+</style>
+</div>
+
+<div id="News" class="tabcontent">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+
+   $( "#textInput2" ).bind( 'paste',function()
+   {
+       setTimeout(function()
+       { 
+          //get the value of the input text
+          var data= $( '#textInput2' ).val() ;
+          //replace the special characters to '' 
+          var dataFull = data.replace(/[^a-zA-Z 0-9]+/g, '');
+          //set the new value of the input text without special characters
+          $( '#textInput2' ).val(dataFull);
+       });
+
+    });
+});
+</script>
+<center>
+<input id="textInput2" type="textInput2" onclick="this.select()" size="60"><br/><br/>
+<button onclick="document.getElementById('textInput2').value = ''">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+</center>
+</div>
+<div id="Contact" class="tabcontent">
+ <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="https://onedigital.sharepoint.com/sites/ZenefitsProcessandProcedureforOAM/_layouts/15/Doc.aspx?sourcedoc={6226084e-94d9-468a-9208-a8b43b6bbe71}&action=embedview&wdAllowInteractivity=False&ActiveCell='Carrier%20Portal%20Access%20'!B2&wdHideHeaders=True&wdInConfigurator=True"></iframe>
+</div>
+
+<div id="About" class="tabcontent">
+  <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="https://onedigital-my.sharepoint.com/personal/jsarmiento_onedigital_com/_layouts/15/Doc.aspx?sourcedoc={e9152681-86e8-4779-a0bc-a2fa0679bf23}&action=embedview&wdAllowInteractivity=False&ActiveCell='Carrier%20Email'!A2&wdHideHeaders=True&wdInConfigurator=True"></iframe>
+</div>
+
+<div id="acs" class="tabcontent">
+<iframe width="100%" height="100%" frameborder="0" scrolling="no" src="https://onedigital-my.sharepoint.com/personal/vliparanon_onedigital_com/_layouts/15/Doc.aspx?sourcedoc={cb85db0c-bd9e-4b65-826c-efa66b31bbc3}&action=embedview&wdAllowInteractivity=False&ActiveCell='Sheet1'!A1&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<div id="Not" class="tabcontent">
+ <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="https://onedigital.sharepoint.com/sites/ZenefitsProcessandProcedureforOAM/_layouts/15/Doc.aspx?sourcedoc={104f518c-782d-4d04-b1a7-8c68409fa047}&action=embedview&wdAllowInteractivity=False&ActiveCell='Post%20Here'!A1&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
+</div>
+
+<div id="zac" class="tabcontent">
+<iframe width="100%" height="100%" frameborder="0" scrolling="no" src="https://onedigital.sharepoint.com/sites/ZenefitsProcessandProcedureforOAM/_layouts/15/Doc.aspx?sourcedoc={105ecce2-e423-4c45-80aa-d7c754174560}&action=embedview&wdAllowInteractivity=False&ActiveCell='admincredsODfiltered1'!A1&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
+</div>
+
+<div id="kac" class="tabcontent">
+<iframe width="100%" height="100%" frameborder="0" scrolling="no" src="https://onedigital.sharepoint.com/sites/ZenefitsProcessandProcedureforOAM/_layouts/15/Doc.aspx?sourcedoc={7f9f99e0-59d3-40ad-a069-7a3aa6cd095a}&action=embedview&wdAllowInteractivity=False&ActiveCell='Working'!A1&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+   
+ 
+</body>
+</html> 
